@@ -1,0 +1,99 @@
+/* Bar Rush 公開ページ共通スタイル（アプリのダークテーマに合わせる）
+   色は config/defaults/copy_brand.json の brand.colors と同じ値 */
+:root {
+  --bg: #0f0f1a;
+  --surface: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #e94560;
+  --text: #eaeaea;
+  --muted: #9aa0b4;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, -apple-system, sans-serif;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 72px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0 28px;
+  border-bottom: 1px solid var(--secondary);
+  margin-bottom: 32px;
+}
+
+header.site img { width: 48px; height: 48px; border-radius: 10px; background: #fff; }
+
+header.site .name { font-size: 18px; font-weight: 700; letter-spacing: .02em; }
+
+h1 { font-size: 26px; line-height: 1.5; margin: 0 0 8px; }
+h2 { font-size: 20px; line-height: 1.6; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--secondary); }
+h3 { font-size: 17px; margin: 28px 0 8px; }
+
+p { margin: 0 0 16px; }
+
+ul, ol { margin: 0 0 16px; padding-left: 1.4em; }
+li { margin: 0 0 6px; }
+
+a { color: var(--accent); text-overflow: ellipsis; overflow-wrap: anywhere; }
+
+hr { border: 0; border-top: 1px solid var(--secondary); margin: 32px 0; }
+
+code {
+  background: var(--surface);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: .92em;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 0 0 20px;
+}
+
+.card h2 { margin-top: 0; border: 0; padding: 0; }
+
+dl.contact { margin: 0; }
+dl.contact dt { color: var(--muted); font-size: 14px; margin-top: 14px; }
+dl.contact dt:first-child { margin-top: 0; }
+dl.contact dd { margin: 2px 0 0; font-size: 17px; }
+
+footer.site {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--secondary);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer.site nav { margin-bottom: 10px; display: flex; gap: 18px; flex-wrap: wrap; }
+
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .wrap { padding: 16px 16px 56px; }
+  h1 { font-size: 22px; }
+}
